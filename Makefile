@@ -1,5 +1,5 @@
 IMAGE="quay.io/amboss-mededu/pyfmt"
-IMAGE_TAG=0.6
+IMAGE_TAG=0.7
 
 .PHONY: build push
 build:
