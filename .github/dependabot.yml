@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    pull-request-branch-name:
+      # Separate sections of the branch name with a hyphen
+      # for example, `dependabot-pip-elasticsearch-dsl-7.2.1`
+      separator: "-"
+  # Keep Dockerfile up to date
+  - package-ecosystem: "docker"
+    # assignees:
+    #   - "amboss-medudu/some-group"
+    directory: "/"
+    ignore:
+      - dependency-name: "python"
+        versions: ['>= 4']
+    # labels:
+    #   - "Code Review Ready"
+    pull-request-branch-name:
+      separator: "-"
+    # reviewers:
+    #   - "amboss-medudu/some-group"
+    schedule:
+      interval: "daily"
