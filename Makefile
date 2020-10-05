@@ -1,11 +1,11 @@
 IMAGE="quay.io/amboss-mededu/pyfmt"
-IMAGE_TAG=0.7
+IMAGE_TAG=latest
 
 .PHONY: build
 build:
 	docker build -t $(IMAGE):$(IMAGE_TAG) .
 
-.PHONY push
+.PHONY: push
 push:
 	docker push $(IMAGE):$(IMAGE_TAG)
 
