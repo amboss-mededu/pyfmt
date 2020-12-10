@@ -15,7 +15,7 @@ All the checks should be executed in the source folder
 ### Formatting check
  ```bash
 docker run -v `pwd`:`pwd` -w `pwd` quay.io/amboss-mededu/pyfmt:latest black --exclude .venv --check .
-```
+ ```
 ### Linting 
 ```bash
 docker run -v `pwd`:`pwd` -w `pwd` quay.io/amboss-mededu/pyfmt:latest flake8 --exclude=.venv .
@@ -41,6 +41,18 @@ docker run -v `pwd`:`pwd` -w `pwd` quay.io/amboss-mededu/pyfmt:latest mypy --ign
 There are two tags available `latest` which contain the latest stable versions of black, flake8, mypy and isort and symver version.
 
 ### Symver versions
+
+#### 0.9
+
+Updated base image.
+
+```
+black==20.8b1
+flake8==3.8.4
+isort==5.6.4
+mypy==0.790
+```
+
 #### 0.8
 Updated base image.
 ```
